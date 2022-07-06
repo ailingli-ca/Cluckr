@@ -1,0 +1,26 @@
+<nav class = "navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid nav-container">
+        <a href="/clucks"><img width="50px" src="/images/chicken.png" alt="Twemoji" class=""></a>        
+            <div class="d-flex justify-content-end pt-2">
+                <ul class="nav justify-content-end">
+                    <li class="nav-item active">
+                        <a class="btn btn-secondary btn-xs px-3 mx-2" type="button" href="/clucks/new">Cluck!</a>
+                    </li>
+                    <% if(username){ %>
+                        <li>
+                            <span class="tp-2 ms-2 me-3"><%- username%></span>
+                        </li>
+                        <li>                       
+                            <form action="/sign_out" method="POST">
+                                <button class="btn btn-secondary btn-xs px-2" type="submit">Sign Out</button>
+                            </form>
+                        </li>                    
+                    <%}else{%>
+                        <li>
+                            <a class="btn btn-secondary btn-xs px-2" type="button" href="/sign_in"> Sign In</a>
+                        </li>
+                    <%}%>        
+            </div>
+    </div>
+</nav>
+<hr>

@@ -1,0 +1,9 @@
+<%- include('../partials/header.ejs')%>
+    <% if(username){ %>
+        <form action="/clucks" method="POST" class="form-group m-3 pt-1 px-2 border border-2 rounded">
+        <%- include('../partials/formInput.ejs')%>
+        </form>
+    <% }else{ %>    
+        <h4>Please <a href="/sign_in">Sign in</a> to create a post</h4>    
+    <% } %>
+<%- include('../partials/footer.ejs')%>

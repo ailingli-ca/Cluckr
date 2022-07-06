@@ -1,0 +1,25 @@
+<div class="ms-1 me-1">
+    <div class="'form-control">
+      <h6></h6>
+      <label for="content" class="control-label text-secondary">Content</label>
+      <h6></h6>
+      <textarea name="content" class = "form-control" rows="5" 
+      placeholder="Whatchoo cluckin' 'bout?"><%- cluck ? cluck.content : '' %></textarea>
+    </div>
+    <h6></h6>
+    <div class="form-group">
+      <label for="image_url" class="control-label text-secondary">Image Url</label>
+      <h6></h6>
+      <input 
+      type="text"
+      class="form-control"
+      name="image_url"
+      placeholder="https://i.imgur.com/qM6KaEy.gifv"
+      value="<%= cluck ? cluck.image_url : '' %>"
+      >
+    </div>
+    <div class="my-3 gap-3 d-flex justify-content-end">
+        <button type="submit" class="btn btn-outline-secondary">Cluck!</button>
+    </div>  
+</div>
+    
