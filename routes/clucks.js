@@ -59,8 +59,14 @@ friendlyTime = function (previous) {
     }    
 }
 
-createTag = function () {
-    
+createTag = function (newTag) {
+    let tag = {}
+    const words = cluck.content.split(" ");
+    for (let i = 0; i < words.length; i++) {
+        if (words.startswith("#")){
+            tag[i] = tag[i] ? tag[i]+1: 1;
+        }
+    }
 }
 
 module.exports = router
