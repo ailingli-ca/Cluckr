@@ -1,0 +1,33 @@
+<%- include('../partials/header.ejs')%>
+<div class="d-flex">
+    <div class="card ms-3 mb-4 pt-2 ps-1 pe-5 table-responsive d-none d-sm-block">
+        <h6 class = "text-secondary">Trending Clucks</h6>
+        
+    </div>
+    <div class="form-group m-2 pt-1 px-2 rounded">
+        <% for(let cluck of clucks){ %>
+            <div class="card mb-4" style="max-width: 500px;">
+                <div class="card-body">
+                    <div class="d-flex"> 
+                        <div class="p-2 ">
+                            <img class="rounded" src="<%- randomImage %>" alt="image">
+                        </div>
+                        <div>
+                            <div class="d-flex">
+                                <h5><%- cluck.username%></h5>
+                                <h3 class="fs-5 px-2 "> • </h3>
+                                <label class="ms-rtl-2"> <%- friendlyTime(cluck.created_at) %></label>
+                            </div>                                
+                            <p><%= cluck.content%></p>
+                                
+                            <% if(cluck.image_url){ %>                
+                                <img class="rounded" style="width:250px;border:1px solid #000;" src="<%- cluck.image_url%>" alt="">                
+                            <% } %>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>
+<%- include('../partials/footer.ejs')%>

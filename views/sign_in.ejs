@@ -1,0 +1,13 @@
+<%- include("./partials/header.ejs") %>
+
+<form action="/sign_in" method="POST">
+    <div class="form-group m-3 pt-2 pb-5 px-3 border border-2 rounded">
+        <label for="username" class="text-secondary">Username</label>
+        <h6></h6>
+        <input type="text" class ="form-control"name="username" placeholder="e.g. Madam Welminster">
+        <br>
+        <button type="submit" name="" class="btn btn-outline-secondary text-secondary bg-white float-end">Sign In</button>
+    </div>
+</form>
+
+<%- include("./partials/footer.ejs") %>
